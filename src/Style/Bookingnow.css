@@ -75,11 +75,12 @@
 }
 
 .search-col { display:flex; align-items:end; justify-self:end; }
-.search-col .search-btn { height:48px; }
+.search-col .search-btn { height:48px; max-width:140px; width:100%; }
 
 .dropdown-group {
   display: flex;
   flex-direction: column;
+  min-width: 0; /* للسماح بالـ ellipsis داخل الشبكة */
 }
 
 .dropdown-label {
@@ -107,6 +108,14 @@
   outline: none;
   transition: border-color 0.3s ease;
   min-height: 52px;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+  text-align-last: right; /* محاذاة النص داخل الـ select */
+  direction: rtl;
 }
 
 .dropdown-select:focus {
