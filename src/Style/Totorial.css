@@ -1,0 +1,159 @@
+.doc-page{
+    display: flex;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #111827;
+}
+.doc-header{
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 14px 24px;
+    font-weight: 700;
+    color: #16a34a;
+}
+.sidebar{
+    width: 260px;
+    border-right: 1px solid #e5e7eb;
+    padding: 20px;
+    background: #ffffff;
+}
+.sidebar-title{
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: capitalize;
+}
+.sidebar-menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-menu li{
+    padding: 10px 8px;
+    cursor:pointer;
+    border-radius: 6px;
+    color: #111827;
+}
+.sidebar-menu li.active{
+    font-weight: 700;
+    color: #16a34a;
+    background: #f0fdf4;
+}
+.content{
+    flex:1;
+    padding: 24px 40px;
+    min-height: 100vh;
+    background: #ffffff;
+}
+.breadcrumb{
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.crumb-badge{
+    background: #eef2ff;
+    color: #4338ca;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 12px;
+}
+.page-title{
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+.page-subtitle{
+    font-size: 16px;
+    color: #374151;
+    margin-bottom: 8px;
+}
+.bullet-list{
+    margin: 0 0 12px 18px;
+}
+.bullet-list li{
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+.info-box{
+    background: #eef6fb;
+    border-left: 4px solid #60a5fa;
+    padding:14px 16px;
+    margin: 20px 0;
+    font-size: 14px;
+    border-radius: 8px;
+}
+.info-title{
+    display: block;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+.info-link{
+    color: #2563eb;
+    text-decoration: none;
+}
+.info-link:hover{
+    text-decoration: underline;
+}
+.section-title{
+    font-size: 24px;
+    margin: 24px 0 12px;
+}
+.numbered-list{
+    margin: 0 0 20px 18px;
+}
+.numbered-list li{ line-height: 1.7; margin-bottom: 8px; }
+.users-table-wrapper{ overflow-x: auto; }
+.users-table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #e5e7eb;
+}
+.users-table th,
+.users-table td{
+    border: 1px solid #e5e7eb;
+    padding: 12px 14px;
+    text-align: left;
+}
+.users-table th{
+    background: #f9fafb;
+    font-weight: 700;
+}
+.api-list{
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+}
+.api-list li{
+    padding-left: 0;
+    position: relative;
+}
+.api-list li::before{
+    content: "•";
+    color: #6b7280;
+    margin-right: 8px;
+}
+.rightbar{
+    width: 260px;
+    border-left: 1px solid #e5e7eb;
+    padding: 20px;
+    background: #ffffff;
+}
+.toc-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.toc-list li{
+    padding:8px 0;
+    cursor:pointer;
+    color: #111827;
+}

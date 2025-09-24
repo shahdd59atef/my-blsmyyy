@@ -1,0 +1,315 @@
+/* Booking Page Styles */
+.booking-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 60vh;
+  background: url('https://blsmy.com/_next/static/media/hero-bg.ab3138f8.webp') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+}
+
+.hero-title-row {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.hero-title-row .fa-solid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: clamp(28px, 5vw, 64px);
+  color: #00bdc3;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #00bdc3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+/* Booking Form Section */
+.booking-form-section {
+  position: relative;
+  margin-top: -100px;
+  z-index: 10;
+}
+
+.booking-form-container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* تكبير الحاوية قليلاً */
+  margin: 0 12px;
+  width: 100%;
+   /* زيادة العرض بتقليل الهوامش الجانبية قليلًا */
+}
+
+.booking-form {
+  width: 100%;
+}
+
+/* Dropdowns Row */
+.dropdowns-row {
+  display: grid;
+  grid-template-columns: 140px repeat(6, 1fr); /* زر البحث عمود ثابت باليسار */
+  gap: 16px;
+  margin-bottom: 30px;
+  direction: rtl; /* ترتيب العناصر من اليمين للشمال */
+}
+
+.search-col { display:flex; align-items:end; justify-self:end; }
+.search-col .search-btn { height:48px; }
+
+.dropdown-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.dropdown-label i {
+  color: #00bdc3;
+  font-size: 16px;
+}
+
+.dropdown-select {
+  padding: 16px 18px; /* bigger input without changing layout */
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  background: white;
+  font-size: 16px;
+  color: #374151;
+  outline: none;
+  transition: border-color 0.3s ease;
+  min-height: 52px;
+}
+
+.dropdown-select:focus {
+  border-color: #00bdc3;
+  box-shadow: 0 0 0 3px rgba(0, 189, 195, 0.1);
+}
+
+/* Action Buttons Row */
+.action-buttons-row { display:none; }
+
+.search-btn {
+  background: #00bdc3;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #00a8b0;
+}
+
+.date-select-btn {
+  background: white;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.date-select-btn:hover {
+  border-color: #00bdc3;
+}
+
+.date-select-btn i {
+  color: #00bdc3;
+}
+
+/* Search Input Row */
+.search-input-row {
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #374151;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #00bdc3;
+  box-shadow: 0 0 0 3px rgba(0, 189, 195, 0.1);
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Group By Row */
+.group-by-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.group-by-text {
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+.group-by-select {
+  padding: 8px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  color: #374151;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.group-by-select:focus {
+  border-color: #00bdc3;
+}
+
+/* Results Cards */
+.booking-results-section { padding: 24px 0 60px; }
+.booking-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.booking-card {
+  background: #e8f9fb;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+.booking-card-image { background:#f9f9f9; display:flex; align-items:center; justify-content:center; padding: 16px; }
+.booking-card-image img { width: 100%; height: 240px; object-fit: cover; border-radius: 12px; }
+.booking-card-body { padding: 16px; text-align: center; color:#0f766e; }
+.doctor-name { font-size: 20px; font-weight: 700; margin-bottom: 8px; color:#0f766e; }
+.badge-specialty { background:#d1f4f6; color:#0f766e; border:none; border-radius:12px; padding:6px 12px; font-weight:700; margin-bottom:8px; }
+.center-and-city { color:#2a9d8f; margin:8px 0; }
+.next-appointment { color:#0f766e; display:flex; gap:6px; justify-content:center; margin-top:6px; }
+.fee-line { color:#0f766e; margin:8px 0; }
+.choose-slot-btn { background:#0ecad4; color:white; border:none; border-radius:999px; padding:10px 20px; font-weight:700; display:inline-flex; align-items:center; gap:8px; }
+.choose-slot-btn i { color:white; }
+
+@media (max-width: 1200px) {
+  .booking-cards-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .booking-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .booking-cards-grid { grid-template-columns: 1fr; }
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* Doctors Slider (removed) */
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .dropdowns-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .booking-form-container {
+    margin: 0 10px;
+    padding: 20px;
+  }
+  
+  .dropdowns-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .action-buttons-row {
+    flex-direction: column;
+  }
+  
+  .search-btn,
+  .date-select-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .dropdowns-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+}

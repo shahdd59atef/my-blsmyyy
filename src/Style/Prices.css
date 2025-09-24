@@ -1,0 +1,334 @@
+.prices-page {
+  background: #fff;
+  min-height: 100vh;
+}
+
+.prices-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.billing-switch {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0 30px;
+}
+
+.switch-btn {
+  background: #fff;
+  color: #00bdc3;
+  border: 2px solid #00bdc3;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.switch-btn.active {
+  background: #00bdc3;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0,189,195,.25);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.prices-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  border-radius: 12px;
+}
+
+.prices-table thead th {
+  background: #f9fbfc;
+  padding: 18px 16px;
+  font-weight: 800;
+  color: #00bdc3;
+  text-align: center;
+}
+
+.feature-col { text-align: right; white-space: nowrap; }
+
+.plan-col.enterprise { background: #f9fbfc; }
+.plan-col.pro { background: #ecfbfd; }
+
+.prices-table tbody td {
+  padding: 18px 16px;
+  border-top: 1px solid #eef2f4;
+  text-align: center;
+}
+
+.value-col .val { font-weight: 700; }
+.value-col .yes { color: #28a745; }
+.value-col .no { color: #dc3545; }
+
+/* Terms and Subscription Section */
+.terms-subscription-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+.terms-notes {
+  flex: 1;
+  max-width: 500px;
+}
+
+.note-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.note-number {
+  font-weight: bold;
+  color: #00bdc3;
+  margin-left: 5px;
+  flex-shrink: 0;
+}
+
+.note-text {
+  flex: 1;
+}
+
+.subscription-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #00bdc3;
+}
+
+.subscribe-btn {
+  background: #00bdc3;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.subscribe-btn:hover:not(:disabled) {
+  background: #0099a3;
+  transform: translateY(-2px);
+}
+
+.subscribe-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Suitable Package Section */
+.suitable-package-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 60px;
+  padding: 40px 20px;
+  background: #f9fbfc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+.suitable-package-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.suitable-package-title {
+  font-size: 32px;
+  color: #00bdc3;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: right;
+}
+
+.package-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.package-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.bullet-point {
+  width: 8px;
+  height: 8px;
+  background: #00bdc3;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.package-type {
+  font-weight: bold;
+  color: #00bdc3;
+  margin-left: 5px;
+}
+
+.illustration-container {
+  flex-shrink: 0;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thinking-person-illustration {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Special Requests Section */
+.special-requests-section {
+  margin-top: 60px;
+  padding: 40px 20px;
+  background: #00bdc3;
+  color: #fff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.special-requests-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.special-requests-description {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.contact-us-btn {
+  background: #fff;
+  color: #00bdc3;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .switch-btn { padding: 12px 18px; }
+  .prices-table thead th, .prices-table tbody td { padding: 14px; }
+  
+  .terms-subscription-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .terms-notes {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .suitable-package-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .suitable-package-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .suitable-package-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .package-item {
+    justify-content: center;
+  }
+
+  .bullet-point {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .illustration-container {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .special-requests-title {
+    font-size: 28px;
+  }
+
+  .special-requests-description {
+    font-size: 16px;
+  }
+
+  .contact-us-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .suitable-package-title {
+    font-size: 24px;
+  }
+  .special-requests-title {
+    font-size: 24px;
+  }
+}
+
+

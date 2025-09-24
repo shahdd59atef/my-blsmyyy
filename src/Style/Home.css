@@ -66,10 +66,11 @@
 .booking-description {
   color: var(--text-muted);
   font-size: 1rem;
-  margin-bottom: 0;
+  margin: 0;
   text-align: right;
   line-height: 1.6;
 }
+.same-line-text { white-space: nowrap; }
 
 .booking-actions {
   display: flex;
@@ -80,7 +81,7 @@
 }
 
 .btn-booking {
-  background: #007bff;
+  background-color: #00bdc3;
   color: white;
   border: none;
   padding: 12px 30px;
@@ -90,14 +91,64 @@
   transition: var(--transition-normal);
   box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
   cursor: pointer;
-  will-change: transform, background-color;
+}
+
+/* Ensure Bootstrap or other utilities don't override booking button */
+.btn.btn-booking {
+  background-color: #00bdc3 !important;
+  color: #ffffff !important;
+  border: none !important;
+  background-image: none !important;
+  box-shadow: 0 2px 10px #00bdc3 rgba(0, 123, 255, 0.3) !important;
+  padding: 12px 30px !important;
+  border-radius: 25px !important;
 }
 
 .btn-booking:hover {
-  background: #0056b3;
+  background-color: #00bdc3;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
   color: white;
+}
+
+.btn.btn-booking:hover,
+.btn.btn-booking:focus,
+.btn.btn-booking:active {
+  background-color: #00bdc3 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4) !important;
+  outline: none !important;
+}
+
+/* Booking title with vertical-stretched icon */
+.booking-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  direction: rtl;
+}
+.booking-title-row .fa-solid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: clamp(24px, 5vw, 56px);
+  color: #00bdc3;
+}
+.booking-title-row .booking-title {
+  margin: 0;
+}
+
+/* Icon with stacked texts to its left */
+.booking-header { display:flex; align-items:center; gap:12px; direction:rtl; }
+.booking-header .booking-texts { display:flex; flex-direction:column; gap:2px; }
+.booking-header .fa-solid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: clamp(24px, 5vw, 56px);
+  color: #00bdc3;
 }
 
 .btn-booking:active {
@@ -441,7 +492,7 @@
 /* New Footer Styles */
 .footer-new {
   background: var(--primary-color);
-  color: white;
+            color: white;
   position: relative;
 }
 
@@ -460,10 +511,10 @@
 }
 
 .download-buttons {
-  display: flex;
+            display: flex;
   gap: 1rem;
   justify-content: flex-end;
-  flex-wrap: wrap;
+            flex-wrap: wrap;
 }
 
 .app-store-btn,
@@ -496,9 +547,9 @@
 .social-payment-section {
   padding: 3rem 0;
   text-align: center;
-}
+        }
 
-.footer-logo {
+        .footer-logo {
   margin-bottom: 2rem;
 }
 
@@ -532,7 +583,7 @@
 }
 
 .social-icons {
-  display: flex;
+            display: flex;
   justify-content: center;
   gap: 1.5rem;
   margin-bottom: 2rem;
@@ -540,24 +591,24 @@
 }
 
 .social-link {
-  color: white;
+            color: white;
   font-size: 1.5rem;
-  text-decoration: none;
+            text-decoration: none;
   transition: var(--transition-normal);
   display: inline-block;
-}
+        }
 
 .social-link:hover {
   color: #e0f7fa;
   transform: scale(1.1);
-}
+        }
 
-.payment-methods {
-  display: flex;
+        .payment-methods {
+            display: flex;
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
-}
+            flex-wrap: wrap;
+        }
 
 .payment-logo {
   background: white;
@@ -756,4 +807,66 @@
   color: #444;
   line-height: 1.6;
 }
+
+/* App Showcase */
+.home-app-showcase-section { padding: 16px 0 24px; }
+.app-showcase-grid { display:grid; grid-template-columns: repeat(5, minmax(180px, 1fr)); gap: 16px; align-items:end; justify-items:center; }
+.phone-mock { background:#fff; border-radius:28px; padding:10px; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
+.phone-mock img { display:block; width: 200px; height:auto; border-radius:24px; }
+/* Slightly raise the middle phone like the UI */
+.app-showcase-grid .phone-mock:nth-child(3) { transform: translateY(-12px); }
+@media (max-width: 992px) { .app-showcase-grid { grid-template-columns: repeat(3, 1fr); } .phone-mock img { width: 180px; } }
+@media (max-width: 600px) { .app-showcase-grid { grid-template-columns: repeat(2, 1fr); } .phone-mock img { width: 160px; } }
+
+/* Home Doctors Slider */
+.home-doctors-slider-section { padding: 32px 0 40px; }
+.home-doctors-title { text-align:center; font-size:28px; margin-bottom:16px; color:#00bdc3; }
+.home-slider-wrapper { position: relative; }
+.home-slider-arrow { position:absolute; top:50%; transform: translateY(-50%); width:44px; height:44px; border:none; border-radius:50%; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.15); display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:2; }
+.home-slider-arrow.prev { right: -12px; }
+.home-slider-arrow.next { left: -12px; }
+.home-slider-arrow i { color:#00bdc3; }
+.home-doctors-slider { display:grid; grid-auto-flow:column; grid-auto-columns: 280px; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding: 8px 4px; }
+.home-doctors-slider::-webkit-scrollbar { height: 8px; }
+.home-doctors-slider::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 999px; }
+.home-doctor-card { background:#fff; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); scroll-snap-align:start; overflow:hidden; }
+.home-doctor-card-media { position:relative; height: 220px; background:#f2f2f2; display:flex; align-items:center; justify-content:center; }
+.home-doctor-card-media img { width:100%; height:100%; object-fit:cover; }
+.home-rating { position:absolute; top:8px; right:8px; background:#fff; color:#374151; border-radius:999px; padding:4px 8px; font-weight:700; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+.home-rating i { color:#f59e0b; margin-left:4px; }
+.home-doctor-card-body { text-align:center; padding:12px; color:#0f766e; }
+.home-doctor-card-name { font-size:16px; font-weight:700; margin:6px 0; }
+.home-doctor-card-spec, .home-doctor-card-city { font-size:14px; color:#2a9d8f; }
+
+/* Home Categories Slider */
+.home-categories-section { padding: 20px 0 10px; margin-bottom: 24px; }
+.home-categories-title { text-align:center; font-size:28px; margin-bottom:16px; color:#00bdc3; }
+.home-categories-wrapper { position:relative; }
+.home-categories-arrow { position:absolute; top:50%; transform: translateY(-50%); width:44px; height:44px; border:none; border-radius:50%; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.15); display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:2; }
+.home-categories-arrow.prev { right:-12px; }
+.home-categories-arrow.next { left:-12px; }
+.home-categories-slider { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:16px; overflow: visible; padding: 8px 4px; }
+.home-category-card { background:#fff; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.08); scroll-snap-align:start; padding:24px; text-align:center; }
+.home-category-icon img { width: 64px; height:64px; object-fit:contain; }
+.home-category-title { margin-top:12px; color:#0f766e; font-weight:700; }
+
+/* Testimonials */
+.home-testimonials-section { background:#ffffff; padding: 24px 0 0; }
+.home-testimonials-title { text-align:center; font-size:28px; margin-bottom:16px; color:#00bdc3; }
+.home-testimonials-wrapper { position:relative; }
+.home-testimonials-slider { display:grid; grid-auto-flow:column; grid-auto-columns: min(380px, 90%); gap:20px; overflow-x:auto; scroll-snap-type:x mandatory; padding: 8px 4px 24px; }
+.home-testimonials-slider::-webkit-scrollbar { height:8px; }
+.home-testimonials-slider::-webkit-scrollbar-thumb { background:#d1d5db; border-radius:999px; }
+.home-testimonials-arrow { position:absolute; top:50%; transform: translateY(-50%); width:44px; height:44px; border:none; border-radius:50%; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.15); display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:2; }
+.home-testimonials-arrow.prev { right:-12px; }
+.home-testimonials-arrow.next { left:-12px; }
+.testimony-card { background:#fff; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.08); padding:20px; scroll-snap-align:start; }
+.testimony-user { display:flex; align-items:center; gap:12px; }
+.testimony-user img { width:56px; height:56px; border-radius:50%; object-fit:cover; }
+.testimony-meta .user-name { font-weight:700; color:#0f766e; }
+.testimony-meta .user-sub { font-size:12px; color:#6b7280; }
+.stars { color:#f59e0b; }
+.testimony-body { margin-top:12px; color:#374151; font-weight:600; }
+.home-dots { text-align:center; margin: 6px 0 24px; }
+.home-dots span { display:inline-block; width:8px; height:8px; background:#d1d5db; border-radius:50%; margin: 0 4px; }
 

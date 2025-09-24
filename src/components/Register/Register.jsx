@@ -19,15 +19,44 @@ function Register() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    // Optional: basic client validation without changing UI behavior
+    if (formData.password !== formData.confirmPassword) {
+      console.warn('Passwords do not match');
+      return;
+    }
+    try {
+      // Normalize phone number: remove non-digits and add country code if missing
+      const raw = `${formData.mobileNumber || ''}`.replace(/\D/g, '');
+      const local = raw.startsWith('5') ? raw : raw.replace(/^0+/, '');
+      const phoneE164 = local.startsWith('966') ? `+${local}` : `+966${local}`; // SA default if not provided
+
+      const payload = {
+        email: formData.email,
+        fullname: formData.responsibleName,
+        password: formData.password,
+        phone_number: phoneE164
+      };
+      const response = await fetch('https://enqlygo.com/api/user/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        console.warn('Register 4xx/5xx:', response.status, data);
+      } else {
+        console.log('Register success:', data);
+      }
+    } catch (error) {
+      console.error('Register error:', error);
+    }
   };
 
   return (
     <div className="register-page">
       <div className="register-container">
-        {/* Left Section - Illustration */}
         <div className="illustration-section">
           <img 
             src="https://medical.blsmy.com/assets/register.9faaae76.svg" 
@@ -35,8 +64,6 @@ function Register() {
             className="register-illustration"
           />
         </div>
-
-        {/* Right Section - Registration Form */}
         <div className="form-section">
           <div className="form-container">
             <h1 className="form-title">انشاء حساب مركز طبي جديد</h1>

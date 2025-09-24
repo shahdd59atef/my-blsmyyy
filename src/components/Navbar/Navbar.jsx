@@ -34,39 +34,37 @@ function Navbar() {
           {/* Main Navigation */}
           <div className="main-nav">
             <ul className="nav-links">
-              <li><a href="#" className="nav-link">تواصل معنا</a></li>
-              <li><a href="#" className="nav-link">الأسعار</a></li>
-              <li><a href="#" className="nav-link">التوظيف</a></li>
-              <li><a href="#" className="nav-link">المراكز الطبية</a></li>
-              <li><a href="#" className="nav-link">العروض</a></li>
+              <li><Link to="/contact-us" className="nav-link">تواصل معنا</Link></li>
+              <li><Link to="/prices" className="nav-link">الأسعار</Link></li>
+              <li><Link to="/Jobpage" className="nav-link">التوظيف</Link></li>
+              <li><Link to="/Centers" className="nav-link">المراكز الطبية</Link></li>
+              <li><Link to="/Offer" className="nav-link">العروض</Link></li>
               <li className="dropdown" ref={centersRef}>
-                <button
-                  type="button"
+        <button
+          type="button"
                   className="nav-link dropdown-toggle btn-reset"
                   onClick={() => setIsCentersOpen((v) => !v)}
                   aria-expanded={isCentersOpen}
-                >
-                  خدمات المراكز
+              >
+                خدمات المراكز
                   <i className="bi bi-chevron-down"></i>
                 </button>
                 {isCentersOpen && (
                   <ul className="dropdown-menu-custom">
                     <li><a href="Register" className="dropdown-item-custom">الانضمام كمركز طبي</a></li>
-                    <li><a href="#" className="dropdown-item-custom">تسجيل دخول المركز الطبي</a></li>
-                    <li><a href="#" className="dropdown-item-custom">الربط مع خدمات بلسمي</a></li>
-                  </ul>
+                    <li><a href="Login" className="dropdown-item-custom">تسجيل دخول المركز الطبي</a></li>
+                    <li><a href="Totorial" className="dropdown-item-custom">الربط مع خدمات بلسمي</a></li>
+              </ul>
                 )}
-              </li>
-            </ul>
+            </li>
+          </ul>
           </div>
-
-          {/* Search and Location */}
           <div className="search-location">
             <button className="search-btn" type="button" onClick={() => console.log('Search clicked')}>
               <i className="bi bi-search"></i>
               بحث
             </button>
-            <input 
+              <input
               type="text" 
               className="search-input" 
               placeholder="ابحث عن طبيب أو..."
@@ -83,12 +81,10 @@ function Navbar() {
                   <li><a href="#" className="dropdown-item-custom">الدمام</a></li>
                   <li><a href="#" className="dropdown-item-custom">جدة</a></li>
                   <li><a href="#" className="dropdown-item-custom">الرياض</a></li>
-                </ul>
+              </ul>
               )}
             </div>
           </div>
-
-          {/* Logo */}
           <div className="navbar-logo">
             <img
               src="https://blsmy.com/images/logo-blsam-mobile.webp"

@@ -1,0 +1,93 @@
+.contactus-page{
+  background:#fff;
+  min-height:100vh;
+}
+.contactus-container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:32px 16px 48px;
+  border-radius: 25px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.contactus-title{
+  font-size:44px;
+  font-weight:800;
+  color:#00bdc3;
+  margin:8px 0 4px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 30px;
+}
+.TIT{
+    font-size:44px;
+  font-weight:800;
+  color:#6b7280;
+  margin:8px 0 4px;
+}
+.contactus-form{
+  background:#fff;
+}
+.form-row{
+  display:flex;
+  gap:24px;
+  margin-bottom:18px;
+}
+.form-row.single{ flex-direction:column; }
+.form-field{ flex:1; }
+.field-label{
+  display:block;
+  color:#6b7280;
+  margin-bottom:8px;
+  font-weight:900;
+  font-size: 20px;
+}
+.req{ color:#ef4444; }
+.field-input{
+  width:100%;
+  height:58px;
+  border:2px solid #e5e7eb;
+  border-radius:999px;
+  padding:0 18px;
+  outline:none;
+  background:#fff;
+}
+.field-input:focus{ border-color:#06b6d4; box-shadow:0 0 0 3px rgba(6,182,212,.15); }
+.field-textarea{
+  width:100%;
+  min-height:240px;
+  border:2px solid #e5e7eb;
+  border-radius:24px;
+  padding:16px;
+  outline:none;
+  background:#fff;
+}
+.field-textarea:focus{ border-color:#06b6d4; box-shadow:0 0 0 3px rgba(6,182,212,.15); }
+.form-actions{ display:flex; justify-content:flex-start; margin:16px 0 28px; }
+.send-btn{
+  background:linear-gradient(90deg,#34d399,#60a5fa);
+  color:#fff;
+  font-weight:700;
+  border:none;
+  border-radius:16px;
+  padding:12px 32px;
+  cursor:pointer;
+}
+.contactus-info{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  border:1px solid #e5e7eb;
+  border-radius:20px;
+  padding:20px 24px;
+}
+.info-item{ display:flex; align-items:center; gap:10px; }
+.info-text{ font-size:18px; color:#0ea5a0; font-weight:700; }
+.whatsapp-dot{ width:10px; height:10px; background:#22c55e; border-radius:50%; display:inline-block; }
+
+@media(max-width:900px){
+  .form-row{ flex-direction:column; }
+  .contactus-container{ padding:24px 12px 40px; }
+}
