@@ -54,8 +54,10 @@
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   padding: 20px; /* تكبير الحاوية قليلاً */
-  margin: 0 12px;
+  margin: 0 auto; /* توسيط الحاوية */
   width: 100%;
+  max-width: 1200px; /* مقاس مناسب للحاوية */
+  box-sizing: border-box;
    /* زيادة العرض بتقليل الهوامش الجانبية قليلًا */
 }
 
@@ -157,6 +159,7 @@
 /* Search Input Row */
 .search-input-row {
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .search-input {
@@ -276,6 +279,7 @@
   .dropdowns-row {
     grid-template-columns: repeat(3, 1fr);
   }
+  .booking-form-container { max-width: 100%; padding: 20px; }
 }
 
 @media (max-width: 768px) {
